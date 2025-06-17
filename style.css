@@ -160,20 +160,36 @@
     .hero-section img {
       display: flex;
     }
-  .hero-extra {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+.hero-extra {
+  max-width: 50%;
+  color: #e6e6e6;
   font-size: 1.1rem;
   line-height: 1.6;
+  margin-top: 30px;
 }
 
 .hero-extra ul {
   list-style: none;
   padding-left: 0;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .hero-extra li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  padding-left: 1.2em;
+  position: relative;
+}
+
+.hero-extra li::before {
+  content: "🍎";
+  position: absolute;
+  left: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .hero-extra {
+    max-width: 100%;
+    text-align: center;
+    padding: 0 10px;
+  }
 }
