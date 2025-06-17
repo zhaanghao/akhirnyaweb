@@ -160,4 +160,20 @@
     .hero-section img {
       display: flex;
     }
-  }
+  .hero-extra {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hero-extra ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.hero-extra li {
+  margin-bottom: 8px;
+}
