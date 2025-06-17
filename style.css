@@ -4,10 +4,9 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
-
 body {
   width: 100%;
-  background: #811112;
+  background-color: #811112;
   color: #fff;
 }
 
@@ -16,7 +15,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: transparent;
+  background: #811112;
   z-index: 10;
 }
 
@@ -66,10 +65,6 @@ body {
   margin-right: 30px;
 }
 
-.navbar .buttons .signin:hover {
-  color: #47b2e4;
-}
-
 .navbar .buttons .signup {
   border: 1px solid #fff;
   padding: 10px 20px;
@@ -87,39 +82,38 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 15px 40px;
+  padding: 100px 20px 60px;
   max-width: 1200px;
   margin: 0 auto;
   gap: 40px;
-  flex-wrap: wrap;
-  background: linear-gradient(to bottom, #811112 23%, #AC3834 95%);
 }
 
 .hero-section .hero {
   max-width: 50%;
 }
 
-.hero-section .hero h2 {
+.hero h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
-.hero-section .hero p {
+.hero p {
   font-size: 1.2rem;
-  color: #ddd;
-  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #f0eeee;
+  line-height: 1.6;
 }
 
 .hero-section .img img {
+  width: 100%;
   max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
 }
 
 .info-section {
-  padding: 40px 20px;
-  background: #b00e2f;
-  color: #e0e0e0;
+  background-color: #b00e2f;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -140,7 +134,6 @@ body {
   margin-bottom: 12px;
   padding-left: 1.4em;
   position: relative;
-  text-align: left;
 }
 
 .info-container li::before {
@@ -149,38 +142,64 @@ body {
   left: 0;
 }
 
-.hero-extra {
-  padding: 40px 20px;
+.maps-section {
+  background-color: #8d0e23;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.maps-container {
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
-  background: #64081b;
+}
+
+.maps-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.maps-container p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hero-extra {
+  background-color: #64081b;
   color: #fff;
-  line-height: 1.7;
+  text-align: center;
+  padding: 60px 20px;
 }
 
 .hero-extra h3 {
   font-size: 1.8rem;
   margin-bottom: 15px;
+  font-weight: bold;
 }
 
+.hero-extra p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive */
 #menu-toggle {
   display: none;
 }
-
 #hamburger-btn {
   font-size: 1.8rem;
   color: #fff;
   cursor: pointer;
   display: none;
-  order: 1;
 }
 
 @media screen and (max-width: 1023px) {
   .navbar .logo a {
     font-size: 1.5rem;
   }
-
   .links {
     position: fixed;
     left: -100%;
@@ -192,30 +211,23 @@ body {
     flex-direction: column;
     transition: 0.3s ease;
   }
-
   .navbar #menu-toggle:checked ~ .links {
     left: 0;
   }
-
-  #hamburger-btn {
+  .navbar #hamburger-btn {
     display: block;
   }
-
   .header .buttons {
     display: none;
   }
-
   .hero-section {
     flex-direction: column;
     text-align: center;
   }
-
-  .hero-section .hero,
-  .hero-section .img img {
+  .hero-section .hero {
     max-width: 100%;
   }
-
-  .info-container li {
-    text-align: left;
+  .hero-section .img img {
+    margin-top: 20px;
   }
 }
