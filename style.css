@@ -1,6 +1,8 @@
 /* Video Section */
 .video-section {
-  background: #8c1c23;
+  background-color: #8c1c23;
+  color: white;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -12,17 +14,32 @@
 .video-container h3 {
   font-size: 2rem;
   margin-bottom: 10px;
+  font-family: inherit;
+  font-weight: 600;
 }
 
 .video-container p {
   margin-bottom: 30px;
   font-size: 1.1rem;
   line-height: 1.6;
+  font-family: inherit;
+}
+
+.video-frame {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  max-width: 100%;
 }
 
 .video-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
   border-radius: 8px;
-  width: 600px;
-  height: 340px;
-  max-width: 90vw;
 }
